@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NekoSheet.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "--path C:\\Users\\yomun\\Desktop\\NekoSheet_Tpl.xlsx"
+    }
+  }
+}

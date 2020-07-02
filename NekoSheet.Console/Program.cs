@@ -2,6 +2,7 @@
 using System.IO;
 using System.CommandLine;
 using System.CommandLine.Invocation;
+using Nekonya;
 
 namespace NekoSheet
 {
@@ -78,6 +79,17 @@ namespace NekoSheet
         /// <returns></returns>
         static string GetOutputName(string outputPath,string filePath, char commentChar)
         {
+            if(outputPath.IsNullOrEmpty())
+            {
+                string file_name = Path.GetFileNameWithoutExtension(filePath);
+                int _comment = file_name.IndexOf(commentChar);
+                if (_comment > 0)
+                {
+                    file_name = file_name.Substring(0, _comment);
+                }
+                return Path.Combine(Path.GetDirectoryName(filePath), file_name + ".json");
+            }
+
             if (Directory.Exists(outputPath))
             {
                 //给定的路径是个文件夹,也就是说要自动生成文件名
