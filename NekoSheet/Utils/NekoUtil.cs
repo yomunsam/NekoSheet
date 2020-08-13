@@ -149,6 +149,8 @@ namespace NekoSheet.Utils
                 case FieldType.String:
                     return new JProperty(propertyName, content);
                 case FieldType.Number:
+                    if (int.TryParse(content, out int i_value))
+                        return new JProperty(propertyName, i_value);
                     if(double.TryParse(content,out double d_value))
                         return new JProperty(propertyName, d_value);
                     else
@@ -191,6 +193,9 @@ namespace NekoSheet.Utils
                 case FieldType.String:
                     return content;
                 case FieldType.Number:
+                    if (int.TryParse(content, out int i_value))
+                        return i_value;
+
                     if (double.TryParse(content, out double d_value))
                         return d_value;
                     else
