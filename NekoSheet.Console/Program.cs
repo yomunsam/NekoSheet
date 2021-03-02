@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.CommandLine;
 using System.CommandLine.Invocation;
@@ -31,6 +31,17 @@ namespace NekoSheet
             rootCommand.Handler = CommandHandler.Create<string,string,bool,char,string>((path,output, indented, commentChar,rootNode) =>
             {
                 var filePaths = GetSheetFileNames(path);
+                if(filePaths.Length > 0)
+                {
+                    //输入的是个目录
+                    if (!output.IsNullOrEmpty())
+                    {
+                        if(!File.Exists(output) && !Directory.Exists(output))
+                        {
+                            Directory.CreateDirectory(output);
+                        }
+                    }
+                }
                 foreach(var file in filePaths)
                 {
                     if(!File.Exists(file))
