@@ -1,4 +1,5 @@
-﻿using NekoSheet.Utils;
+using Nekonya;
+using NekoSheet.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NPOI.SS.UserModel;
@@ -134,6 +135,8 @@ namespace NekoSheet
                 if (cell == null)
                     continue;
                 var cell_str = cell.ToString();
+                if (cell_str.IsNullOrEmpty())
+                    continue;
                 if(NekoUtil.ParseFieldStr(cell_str  ,out string name ,out var Type , out var subType))
                 {
                     var info = new SheetFieldInfo()
