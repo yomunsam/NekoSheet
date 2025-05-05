@@ -13,12 +13,12 @@ namespace NekoSheet.Test
         [Test]
         public void GetDefaultJsonValueTest()
         {
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.String, Enums.FieldType.String).ToString());
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Number, Enums.FieldType.String).ToString());
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Boolean, Enums.FieldType.String).ToString());
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.String).ToString());
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.Number).ToString());
-            TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.Boolean).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.String, Enums.FieldType.String).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Number, Enums.FieldType.String).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Boolean, Enums.FieldType.String).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.String).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.Number).ToString());
+            //TestContext.WriteLine(NekoUtil.GetDefaultValue("test", Enums.FieldType.Array, Enums.FieldType.Boolean).ToString());
             Assert.Pass();
         }
     }

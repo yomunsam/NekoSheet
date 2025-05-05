@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace NekoSheet.Enums;
 
-namespace NekoSheet.Enums
+public enum FieldType
 {
-    public enum FieldType
-    {
-        String,
-        Number,
-        Boolean,
-        Array
-    }
+    String,
+    Number,
+    Boolean,
+    Array
 }
